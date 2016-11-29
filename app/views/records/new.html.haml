@@ -1,0 +1,12 @@
+.column
+  = form_tag(records_path) do
+    %label Did you drink coffee
+    %select(name='record[coffee]')
+      %option yes
+      %option no
+
+    %p
+      %label Other comments
+      %input(type='textarea' name='record[other]')
+
+    %button(type='submit') Submit

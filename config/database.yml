@@ -1,0 +1,15 @@
+login: &login
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+development:
+  <<: *login
+  database: records_development
+  host: localhost
+
+test: &test
+  <<: *login
+  database: records_test 
+  host: localhost

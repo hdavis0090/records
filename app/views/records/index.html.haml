@@ -1,0 +1,9 @@
+.column
+  %table
+    - Record.all.each do |record|
+      %tr
+        %td= record.created_at
+      - record.questionnaire.each do |question, answer|
+        %tr
+          %td= question
+          %td= answer
